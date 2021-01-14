@@ -11,16 +11,14 @@ import me.minikuma.board.entity.Board;
  */
 @Data
 @NoArgsConstructor
-public class BoardListDto {
-    private int seq;
+public class BoardDto {
     private String title;
+    private String content;
     private String writer;
-    private int cnt;
 
-     public BoardListDto(Board board) {
-        this.seq = board.getSeq();
+    public BoardDto(Board board) {
         this.title = board.getTitle();
+        this.content = board.getContent();
         this.writer = board.getWriter();
-        this.cnt = board.getCnt();
     }
 }

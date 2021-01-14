@@ -1,4 +1,4 @@
-package me.minikuma.board.domain;
+package me.minikuma.board.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,8 +13,8 @@ import java.sql.Timestamp;
  * Github : http://github.com/minikuma
  */
 @Getter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Alias("board")
 public class Board {
     private int seq;

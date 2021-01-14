@@ -1,4 +1,4 @@
-package me.minikuma.board.domain;
+package me.minikuma.board.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

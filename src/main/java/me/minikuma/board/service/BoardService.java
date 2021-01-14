@@ -1,6 +1,7 @@
 package me.minikuma.board.service;
 
-import me.minikuma.board.domain.Board;
+import me.minikuma.board.dto.BoardDto;
+import me.minikuma.board.dto.BoardListDto;
 
 import java.util.List;
 
@@ -10,5 +11,6 @@ import java.util.List;
  * Github : http://github.com/minikuma
  */
 public interface BoardService {
-    List<Board> list();
+    List<BoardListDto> list();
+    BoardDto select(int seq);
 }

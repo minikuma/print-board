@@ -1,6 +1,6 @@
-package me.minikuma.board.dao;
+package me.minikuma.board.mapper;
 
-import me.minikuma.board.domain.Board;
+import me.minikuma.board.entity.Board;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,4 +13,5 @@ import java.util.List;
 @Repository
 public interface BoardDao {
     List<Board> list();
+    Board select(int seq);
 }

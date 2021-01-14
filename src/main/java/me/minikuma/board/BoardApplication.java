@@ -4,7 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@MapperScan("me.minikuma.board.dao")
+@MapperScan("me.minikuma.board.mapper")
 @SpringBootApplication
 public class BoardApplication {
 

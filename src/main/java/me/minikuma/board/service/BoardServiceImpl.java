@@ -1,10 +1,13 @@
 package me.minikuma.board.service;
 
 import lombok.RequiredArgsConstructor;
-import me.minikuma.board.dao.BoardDao;
-import me.minikuma.board.domain.Board;
+import me.minikuma.board.dto.BoardDto;
+import me.minikuma.board.mapper.BoardDao;
+import me.minikuma.board.entity.Board;
+import me.minikuma.board.dto.BoardListDto;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,7 +22,18 @@ public class BoardServiceImpl implements BoardService {
     private final BoardDao boardDao;
 
     @Override
-    public List<Board> list() {
-        return boardDao.list();
+    public List<BoardListDto> list() {
+        List<Board> boards = boardDao.list();
+        List<BoardListDto> list = new ArrayList<>();
+        for (Board board : boards) {
+            list.add(new BoardListDto(board));
+        }
+        return list;
+    }
+
+    @Override
+    public BoardDto select(int seq) {
+        Board board = boardDao.select(seq);
+        return new BoardDto(board);
     }
 }
