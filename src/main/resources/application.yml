@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://45.32.29.18:3306/BOARD
+      username: board
+      password: springmvc
+---
+mybatis:
+  configuration:
+    cache-enabled: false
+    map-underscore-to-camel-case: true
+  type-aliases-package: me.minikuma.board.domain
+  mapper-locations: classpath:dao/*.xml
