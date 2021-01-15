@@ -7,9 +7,9 @@ spring:
   datasource:
     hikari:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:mysql://45.32.29.18:3306/BOARD
-      username: board
-      password: springmvc
+      jdbc-url:
+      username:
+      password:
 ---
 mybatis:
   configuration:
