@@ -20,6 +20,11 @@ public class BoardController {
 
     private final BoardService boardService;
 
+    @GetMapping({"/", ""})
+    public ModelAndView home() {
+        return new ModelAndView("board/home");
+    }
+
     @GetMapping("/list")
     public ModelAndView list() {
         ModelAndView view = new ModelAndView("board/list");
