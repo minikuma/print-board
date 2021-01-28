@@ -3,6 +3,7 @@
 <mapper namespace="me.minikuma.board.mapper.BoardDao">
     <select id="list" resultType="board">
         SELECT * FROM BOARD
+        WHERE isDeleted = "N"
         ORDER BY seq
     </select>
 

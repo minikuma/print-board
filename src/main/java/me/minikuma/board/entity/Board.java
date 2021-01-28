@@ -22,6 +22,7 @@ public class Board {
     private String content;
     private String writer;
     private int password;
+    private String isDeleted;
     private String regId;
     private Timestamp regDate;
     private String updId;

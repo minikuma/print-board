@@ -1,9 +1,11 @@
 package me.minikuma.board.api;
 
 import lombok.RequiredArgsConstructor;
+import me.minikuma.board.dto.BoardDto;
 import me.minikuma.board.dto.BoardListDto;
 import me.minikuma.board.service.BoardService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,5 +26,10 @@ public class BoardApiController {
     @GetMapping("/list")
     public List<BoardListDto> getList() {
         return boardService.list();
+    }
+
+    @GetMapping("/read/{id}")
+    public BoardDto getBoard(@PathVariable("id") int seq) {
+        return boardService.select(seq);
     }
 }
